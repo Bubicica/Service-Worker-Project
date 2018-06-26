@@ -1,3 +1,16 @@
+// 
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js')
+  .then(function(registration) {
+    console.log('Registration successful! :)');
+  })
+  .catch(function(error) {
+    console.log('Registration failed! :(');
+  });
+}
+
+
 let restaurants,
   neighborhoods,
   cuisines
@@ -161,6 +174,7 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
+  image.setAttribute("alt", restaurant.name);
   li.append(image);
 
   const name = document.createElement('h3');
@@ -178,6 +192,9 @@ createRestaurantHTML = (restaurant) => {
   const more = document.createElement('a');
   more.innerHTML = 'View Details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("aria-label", restaurant.name + " " + "details");
+  more.setAttribute("aria-describedby", restaurant.neighborhood + " " + restaurant.address);
+  more.setAttribute("class", "res-link");
   li.append(more)
 
   return li

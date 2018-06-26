@@ -1,6 +1,8 @@
 let restaurant;
 var newMap;
 
+document.documentElement.setAttribute("lang", "en-US");
+
 /**
  * Initialize map as soon as the page is loaded.
  */
@@ -87,7 +89,8 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   address.innerHTML = restaurant.address;
 
   const image = document.getElementById('restaurant-img');
-  image.className = 'restaurant-img'
+  image.className = 'restaurant-img';
+  image.setAttribute("alt", restaurant.name);
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
