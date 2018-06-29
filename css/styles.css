@@ -273,6 +273,39 @@ select:focus, select:hover{
   width: 100%;
 }
 
+.inside h1{
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  background-color: #252831;
+  text-align: center;
+  margin: 0;
+}
+
+.inside h1 a {
+	margin: 0 auto;
+    color: #fff;
+    font-size: 14pt;
+    font-weight: 200;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.inside h1 a:hover{
+ color: #4F91D9;
+}
+
+.inside header{
+	display: grid;
+	align-items: center;
+}
+
+.inside nav{
+	height: auto;
+	text-align: left;
+}
+
 #restaurant-name {
   color: #ff7b00;
   font-family: Arial,sans-serif;
@@ -309,13 +342,12 @@ select:focus, select:hover{
 
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
-  border-top: 1px solid #fff;
   padding-left: 4%;
   padding-right: 4%;
   width: 90%;
 }
 
-#reviews-container h2 {
+#reviews-container h3 {
   margin-top: 12px;
   color: #ff7b00;
   font-size: 24pt;
@@ -356,7 +388,7 @@ select:focus, select:hover{
 	font-size: 18pt;
 	}
 	
-	#reviews-container h2 {
+	#reviews-container h3 {
 	font-size: 18pt;
 	margin-top: 6px;
 	}
